@@ -4,8 +4,36 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.alfredapp.leejones.datadog-dashboards</string>
+	<key>category</key>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>204EB285-A7C0-458E-8B6F-CF7C241FCD04</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>59A7DAF5-3D28-4513-A390-C215A1F3925C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>59A7DAF5-3D28-4513-A390-C215A1F3925C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C12F2858-8C74-41E0-A26B-B9011ACC8BFD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>6C68D0BB-A89A-4FDD-BB99-B5A5B460646E</key>
 		<array>
 			<dict>
@@ -15,6 +43,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -23,6 +53,8 @@
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -31,6 +63,34 @@
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CC57B698-076E-480D-8A2A-2676AA5680CB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D5F0AF2D-ED68-44FA-B2EC-2047951CA0CC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D5F0AF2D-ED68-44FA-B2EC-2047951CA0CC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C12F2858-8C74-41E0-A26B-B9011ACC8BFD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -47,8 +107,10 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>plusspaces</key>
-				<false/>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
 				<key>url</key>
 				<string>https://app.datadoghq.com/dash/{query}</string>
 				<key>utf8</key>
@@ -59,17 +121,36 @@
 			<key>uid</key>
 			<string>489F9B78-A5EB-4F30-A3F7-336AA48780B6</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>https://app.datadoghq.com/dash/{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>A07AFF79-DB16-4B8F-9200-2803F116A3BE</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>keyword</key>
-				<string>datadog-dashboard</string>
+				<string>dd</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -85,6 +166,12 @@
 PATH="${PATH}:${PWD}"
 
 ./open-datadog-dashboard {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Open one of your Datadog dashboards for '{query}'</string>
 				<key>title</key>
 				<string>Open one of your Datadog dashboards</string>
 				<key>type</key>
@@ -97,22 +184,7 @@ PATH="${PATH}:${PWD}"
 			<key>uid</key>
 			<string>6C68D0BB-A89A-4FDD-BB99-B5A5B460646E</string>
 			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>https://app.datadoghq.com/dash/{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>A07AFF79-DB16-4B8F-9200-2803F116A3BE</string>
-			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -121,11 +193,7 @@ PATH="${PATH}:${PWD}"
 				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<true/>
-				<key>output</key>
-				<integer>0</integer>
 				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
 				<false/>
 				<key>text</key>
 				<string>https://app.datadoghq.com/dash/{query} was copied to your clipboard.</string>
@@ -137,32 +205,213 @@ PATH="${PATH}:${PWD}"
 			<key>uid</key>
 			<string>B572DFF9-221A-4624-B01E-8FE1BED37BF8</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>qry="{query}"
+qry="${qry// /}"
+echo $qry
+echo 
+
+if [ -e ~/.datadogrc ]; then
+  grep DATADOG_APP_KEY ~/.datadogrc
+  if [ $? -eq 0 ]; then
+    # if key exist in file delete key line
+    cat ~/.datadogrc | grep -v DATADOG_APP_KEY &gt; ~/.datadogrc.new
+  fi
+  echo export DATADOG_APP_KEY=$qry &gt;&gt; ~/.datadogrc.new
+fi
+
+mv -f ~/.datadogrc.new ~/.datadogrc
+chmod 600 ~/.datadogrc</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D5F0AF2D-ED68-44FA-B2EC-2047951CA0CC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>dd-set-appkey</string>
+				<key>subtext</key>
+				<string>Set DATADOG_APP_KEY</string>
+				<key>text</key>
+				<string>dd-set-appkey</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>CC57B698-076E-480D-8A2A-2676AA5680CB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Set Key</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>C12F2858-8C74-41E0-A26B-B9011ACC8BFD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>qry="{query}"
+qry="${qry// /}"
+echo $qry
+echo 
+
+if [ -e ~/.datadogrc ]; then
+  grep DATADOG_API_KEY ~/.datadogrc
+  if [ $? -eq 0 ]; then
+    ## if key exist in file delete key line
+    cat ~/.datadogrc | grep -v DATADOG_API_KEY &gt; ~/.datadogrc.new
+  fi
+  echo export DATADOG_API_KEY=$qry &gt;&gt; ~/.datadogrc.new
+fi
+mv -f ~/.datadogrc.new ~/.datadogrc
+chmod 600 ~/.datadogrc</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>59A7DAF5-3D28-4513-A390-C215A1F3925C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>dd-set-apikey</string>
+				<key>subtext</key>
+				<string>Set DATADOG_API_KEY</string>
+				<key>text</key>
+				<string>dd-set-apikey</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>204EB285-A7C0-458E-8B6F-CF7C241FCD04</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>204EB285-A7C0-458E-8B6F-CF7C241FCD04</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>520</integer>
+		</dict>
 		<key>489F9B78-A5EB-4F30-A3F7-336AA48780B6</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>60</real>
 		</dict>
+		<key>59A7DAF5-3D28-4513-A390-C215A1F3925C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>480</integer>
+			<key>ypos</key>
+			<integer>520</integer>
+		</dict>
 		<key>6C68D0BB-A89A-4FDD-BB99-B5A5B460646E</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>210</real>
 		</dict>
 		<key>A07AFF79-DB16-4B8F-9200-2803F116A3BE</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
-			<real>270</real>
+			<integer>180</integer>
 		</dict>
 		<key>B572DFF9-221A-4624-B01E-8FE1BED37BF8</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
-			<real>400</real>
+			<integer>310</integer>
+		</dict>
+		<key>C12F2858-8C74-41E0-A26B-B9011ACC8BFD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<integer>460</integer>
+		</dict>
+		<key>CC57B698-076E-480D-8A2A-2676AA5680CB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>380</integer>
+		</dict>
+		<key>D5F0AF2D-ED68-44FA-B2EC-2047951CA0CC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>480</integer>
+			<key>ypos</key>
+			<integer>380</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
