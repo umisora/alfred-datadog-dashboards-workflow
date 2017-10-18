@@ -16,11 +16,8 @@ bin/install
 
 The plugin needs a Datadog API key and Application key. You can find or create one on the ["Integrations" -> "APIs" page](https://app.datadoghq.com/account/settings#api).
 
-Once you have the keys, create a file named `~/.datadogrc` with the following format:
 
-```
-export DATADOG_API_KEY=123yourapikey
-export DATADOG_APP_KEY=123yourappkey
-```
+![screenshot of alfred-datadog-dashboards-workflow-set-apikey-command](docs/dd-set-apikey.png)
+![screenshot of alfred-datadog-dashboards-workflow-set-appkey-command](docs/dd-set-appkey.png)
 
-**make sure to restrict permissions on this file (ex. `chmod 600 ~/.datadogrc`)**
+This command create and update a file `~/.datadogrc`.
